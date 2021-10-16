@@ -1,10 +1,11 @@
-number = float(input("Number: "))
-while number <= 10 or number >= 20:
-    if number <= 10:
+compnum = 50
+guess = int(input("Can you guess the number I am thinking of? "))
+count = 1
+while guess != compnum:
+    if guess < compnum:
         print("Too low")
-    elif number >= 20:
+    else:
         print("Too high")
-    else: 
-        print("I dont understend")
-    number = float(input("Try again: "))
-print("Thank you")
+    count = count + 1
+    guess = int(input("Have another guess: "))
+print("Well done, you took ", count, " attempts")
